@@ -1,0 +1,21 @@
+version: "3.9"
+
+networks:
+  development:
+    driver: bridge
+
+services:
+  vscode:
+    user: vscode
+    container_name: annoflow_vscode
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - development
+    volumes:
+      - ../:/workspace:delegated
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: /bin/sh -c "while sleep 1000; do :; done"
