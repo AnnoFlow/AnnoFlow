@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "AnnoFlow.Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/AnnoFlow.Api/bin/Debug/net6.0/AnnoFlow.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/AnnoFlow.Api",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+    ]
+}
