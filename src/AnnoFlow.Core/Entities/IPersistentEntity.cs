@@ -1,8 +1,7 @@
 namespace AnnoFlow.Core.Entities
 {
-    public interface IIdentifiable<T>
+    public interface IPersistentEntity<T> : IIdentifiable<T>
         where T : IEquatable<T>
     {
-        T Id { get; }
     }
 }

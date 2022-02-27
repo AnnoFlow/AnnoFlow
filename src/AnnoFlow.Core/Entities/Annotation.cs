@@ -1,6 +1,6 @@
 namespace AnnoFlow.Core.Entities
 {
-    public class Annotation : IIdentifiable
+    public class Annotation : IPersistentEntity<Guid>
     {
         public Guid Id { get; set; }
 
