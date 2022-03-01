@@ -1,3 +1,3 @@
 # AnnoFlow
 
-Proof of concept: dataset management tool.
+Computer vision dataset management system.
