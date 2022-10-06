@@ -6,7 +6,10 @@
     "extensions": [
         "k--kato.docomment",
         "ms-dotnettools.csharp",
-        "jchannon.csharpextensions"
+        "jchannon.csharpextensions",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-dotnettools.dotnet-interactive-vscode"
     ],
     "shutdownAction": "stopCompose"
 }
