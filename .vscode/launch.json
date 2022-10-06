@@ -12,5 +12,16 @@
             "console": "internalConsole",
             "stopAtEntry": false
         },
+        {
+            "name": "AnnoFlow.Console",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/AnnoFlow.Console/bin/Debug/net6.0/AnnoFlow.Console.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/AnnoFlow.Console",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
     ]
 }
