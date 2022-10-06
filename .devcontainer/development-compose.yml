@@ -1,24 +1,25 @@
 version: "3.9"
 
 networks:
-  development:
+  backend:
     driver: bridge
 
 services:
-  vscode:
-    user: vscode
-    container_name: annoflow_vscode
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "80:80"
+  devcontainer:
+    container_name: annoflow-vscode
+    image: "ghcr.io/ulfsoft-harbour/dotnet/web-sdk-vscode:6.0-20220703.6"
     networks:
-      - development
+      - backend
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+      - "443:443"
+      - "80:80"
+    volumes:
+      - "../:/workspace:delegated"
+      - "~/.gitconfig:/home/vscode/.gitconfig:ro"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-    volumes:
-      - ../:/workspace:delegated
-      - /var/run/docker.sock:/var/run/docker.sock
     command: /bin/sh -c "while sleep 1000; do :; done"
+    user: vscode
