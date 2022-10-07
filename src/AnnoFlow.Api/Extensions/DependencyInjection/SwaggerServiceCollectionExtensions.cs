@@ -3,7 +3,7 @@ using Microsoft.OpenApi.Models;
 
 namespace AnnoFlow.Api.Extensions.DependencyInjection
 {
-    public static class SwaggerComposition
+    public static class SwaggerServiceCollectionExtensions
     {
         public static IServiceCollection AddSwagger(this IServiceCollection services, ApiVersion version, OpenApiInfo openApiInfo)
         {
