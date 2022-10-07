@@ -2,16 +2,16 @@ using AnnoFlow.Core.Entities;
 
 namespace AnnoFlow.Core.Persistence
 {
-    public interface IRepository<T, TId>
+    public interface IRepository<TId, TValue>
         where TId : IEquatable<TId>
-        where T : IPersistentEntity<TId>
+        where TValue : IPersistentEntity<TId>
     {
-        Task DeleteAsync(T item);
+        Task DeleteAsync(TValue item);
 
-        Task<T?> FindAsync(TId id);
+        Task<TValue?> FindAsync(TId id);
 
-        Task InsertAsync(T item);
+        Task InsertAsync(TValue item);
 
-        Task ReplaceAsync(T item);
+        Task ReplaceAsync(TValue item);
     }
 }

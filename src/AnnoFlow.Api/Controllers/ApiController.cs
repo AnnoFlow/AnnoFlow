@@ -6,11 +6,11 @@ namespace AnnoFlow.Api.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public abstract class ApiController : ControllerBase
     {
-        protected readonly ILogger logger;
-
-        protected ApiController(ILogger targetLogger)
+        protected ApiController(ILogger logger)
         {
-            logger = targetLogger;
+            Logger = logger;
         }
+
+        protected ILogger Logger { get; }
     }
 }

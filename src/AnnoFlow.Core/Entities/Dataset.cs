@@ -1,11 +1,11 @@
 namespace AnnoFlow.Core.Entities
 {
-    public class Dataset : IPersistentEntity<Guid>, IVersionable
+    public class Dataset : IPersistentEntity<Guid>
     {
-        public Dataset(Guid id, Version datasetVersion)
+        public Dataset(Guid id, Version version)
         {
             Id = id;
-            Version = datasetVersion;
+            Version = version;
         }
 
         public Guid Id { get; init; }
